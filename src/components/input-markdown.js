@@ -4,7 +4,7 @@ class InputMarkdown extends Component {
   constructor (props) {
     super(props);
 
-    this.state = {input: ''};
+    this.state = {input: this.props.text};
   }
   render() {
     return (
