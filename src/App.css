@@ -343,6 +343,9 @@ body, html {
     padding-right: 10px;
     font-size: 2.4em;
     font-weight: bold;
-    bottom: 0; } }
+    bottom: 0; }
+
+  .boxes, .input-markdown textarea, .markdown-viewer {
+    min-height: 65vh; } }
 
 /*# sourceMappingURL=App.css.map */
