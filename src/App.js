@@ -44,7 +44,7 @@ class App extends Component {
       return (
         <div>
           <div className="header">
-            <h1 className="title"># Md.edit</h1>
+            <h1 className="title">Md.edit</h1>
           <SwitchButton currentWindow={this.state.visibleWindow} onSwitchClick={this.changeVisible}/>
           </div>
           {this.state.visibleWindow === 1 ? 
@@ -57,7 +57,7 @@ class App extends Component {
       return (
         <div>
           <div className="header">
-            <h1 className="title"># Md.edit</h1>
+            <h1 className="title">Md.edit</h1>
           </div>
           <InputMarkdown text={this.state.text} onTextareaChange={this.updateText} />
           <MarkdownViewer text={this.state.text} />
