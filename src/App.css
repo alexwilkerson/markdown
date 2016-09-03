@@ -32,27 +32,63 @@ body, html {
 
 #root {
   margin: 10px auto;
-  max-width: 1000px; }
+  max-width: 1000px;
+  text-align: center; }
 
 .boxes, .input-markdown textarea, .markdown-viewer {
-  border: 6px double #D91A8C;
+  border: 10px double #D94274;
   border-radius: 6px;
   padding: 10px;
-  min-height: 90vh;
+  min-height: 80vh;
   margin-bottom: 10px;
   box-shadow: 1px 2px 0 black; }
 
+.header {
+  position: relative;
+  height: 48px; }
+
+.title {
+  padding-right: 10px;
+  font-size: 2.8em;
+  font-weight: bold;
+  bottom: 0; }
+
+.switch-button {
+  position: absolute;
+  cursor: pointer;
+  left: calc(50% + 5px);
+  background-color: #D94274;
+  margin-bottom: 6px;
+  padding: 8px 16px;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 1px 2px 0 black;
+  outline: none;
+  bottom: 0; }
+
+.switch-button:hover {
+  background-color: #e26c93; }
+
+.switch-button:active {
+  box-shadow: none;
+  bottom: -2px;
+  left: calc(50% + 6px); }
+
 .input-markdown {
-  width: 43%;
+  width: 42%;
   float: left;
   margin-left: 2%; }
   .input-markdown textarea {
     width: 100%;
     font-size: 1em;
+    outline: none;
     resize: none; }
 
 .markdown-viewer {
-  width: 43%;
+  width: 42%;
+  text-align: left;
   margin-right: 2%;
   float: right; }
   .markdown-viewer a {
@@ -293,11 +329,20 @@ body, html {
 @media only screen and (max-width: 649px) {
   .input-markdown, .markdown-viewer {
     float: none;
-    width: calc(100% - 36px);
+    width: calc(100% - 42px);
     margin: 0; }
 
   #root {
     padding-right: 1vw;
-    padding-left: 1vw; } }
+    padding-left: 1vw; }
+
+  .title {
+    position: absolute;
+    right: calc(50% + 5px);
+    display: inline;
+    padding-right: 10px;
+    font-size: 2.4em;
+    font-weight: bold;
+    bottom: 0; } }
 
 /*# sourceMappingURL=App.css.map */

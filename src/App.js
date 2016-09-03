@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      text: '# this is some sample text', 
+      text: '# This is an example.\n## of what you can do with\n### _MARKDOWN!_\n\nIf you like this, you can see more at [xcvfd.com](http://xcvfd.com).', 
       windowWidth: window.innerWidth,
       visibleWindow: 1
     };
@@ -43,7 +43,10 @@ class App extends Component {
     if (this.state.windowWidth < 650) {
       return (
         <div>
+          <div className="header">
+            <h1 className="title"># Md.edit</h1>
           <SwitchButton currentWindow={this.state.visibleWindow} onSwitchClick={this.changeVisible}/>
+          </div>
           {this.state.visibleWindow === 1 ? 
             <InputMarkdown text={this.state.text} onTextareaChange={this.updateText} /> : 
             <MarkdownViewer text={this.state.text} />
@@ -53,6 +56,9 @@ class App extends Component {
     } else {
       return (
         <div>
+          <div className="header">
+            <h1 className="title"># Md.edit</h1>
+          </div>
           <InputMarkdown text={this.state.text} onTextareaChange={this.updateText} />
           <MarkdownViewer text={this.state.text} />
         </div>
